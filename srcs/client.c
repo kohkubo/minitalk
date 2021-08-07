@@ -40,8 +40,9 @@ static void	client(char **av)
 {
 	pid_t	pid;
 
+	errno = 0;
 	pid = (pid_t)ft_atoi(av[1]);
-	if (pid < 1 || !is_available_pid(pid))
+	if (errno != 0 || pid < 1 || !is_available_pid(pid))
 		ft_error_exit("pid error");
 	receiver(client_handler);
 	send_string(pid, av[2]);

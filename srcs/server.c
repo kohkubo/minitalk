@@ -27,12 +27,9 @@ static void	server_handler(int sig, siginfo_t *info, void *ucontext)
 	static unsigned char	uc;
 
 	(void)ucontext;
-	if (sig == SIGUSR1 || sig == SIGUSR2)
-	{
-		if (sig == SIGUSR2)
-			uc |= (1 << i);
-		i++;
-	}
+	if (sig == SIGUSR2)
+		uc |= (1 << i);
+	i++;
 	if (i == 8)
 	{
 		if (index > BUFSIZE - 1)
