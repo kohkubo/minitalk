@@ -53,7 +53,7 @@ static void	client(char **av)
 int	main(int ac, char **av)
 {
 	if (ac != 3)
-		ft_error_exit("Usage: %s <pid> <str>");
+		ft_error_exit("Usage: ./client <pid> <str>");
 	client(av);
 	return (0);
 }
