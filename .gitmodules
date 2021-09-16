@@ -1,0 +1,6 @@
+[submodule "lib/libex"]
+	path = lib/libex
+	url = git@github.com:kohkubo/libex.git
+[submodule "lib/libft"]
+	path = lib/libft
+	url = git@github.com:kohkubo/libft_v3.git
